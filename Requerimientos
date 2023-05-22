@@ -10,3 +10,35 @@ Funcionalidades.
 •	Mantener sesión iniciada.
 •	Cerrar sesión automáticamente por inactividad.
 •	Establecer roles.
+
+
+
+
+
+2.	Garantía
+Datos de entrada
+Para ser garantía la fecha de compra debe ser de hasta 3 años a su fecha de compra.
+•	Fecha de Compra (Como fecha, debe ser valida)	
+•	Fecha de Intervención (Como fecha, día de la atención, puede ser más de una pero la que se paga es cuando se soluciona el problema, las demás se siguen respaldando en la misma data)	
+•	Cantidad (Como texto, cantidad de repuestos cambiados, también puede ser 0 por un ajuste técnico etc)
+•	Código del repuesto (Como Texto, si son varios repuestos se permitirá el ingreso de varios códigos)
+•	Descripción del Repuesto (Como Texto)
+•	Código del Producto (Como Texto, se puede autocompletar con la descripción del producto, definido desde la BD)
+•	Descripción del Producto (Como Texto, se puede autocompletar con el código del producto, definido desde la BD)
+•	Serie (Como texto)
+•	Garantía (Como número, se ve con instalación autocompletar si es posible, de no existir se completa con “Sap”)
+•	Técnico (Como texto, definido desde la BD)
+•	Cliente	 (Como texto, máximo 50 caracteres)
+•	Observación	(Como texto, Slider: Dar de baja, pagar al técnico – No dar de baja, pagar al técnico)
+•	valor a Pagar 	(Como decimal)
+•	Cédula	 (Como entero, máximo 10 caracteres)
+•	Correo	 (Como Texto)
+•	teléfono del cliente (Como número, máximo 10 caracteres)
+•	Técnico (Como Texto, máximo 30 caracteres)
+Funcionalidades.
+Selección año-mes: en este modulo seleccionamos el año y mes donde vamos a trabajar mensualmente, puede ser por calendario.
+Reporte: al finalizar cada mes, la data se guardará en un módulo reportes para su respectivo uso.
+Operaciones CRUD: se agregará datos, se eliminará o modificara mensualmente en caso de un error, estos últimos no se podrán alterar si se cierra mes.
+Botón cierre mes: Botón que enviara la data a su respectivo modulo.
+Cargar documentos: podremos cargar imágenes que corresponden a una hoja de servicio y documentos en pdf que son las facturas correspondientes.
+Cargar documentos: podremos cargar imágenes que corresponden a una hoja de servicio y documentos en pdf que son las facturas correspondientes. como se puede implementar la idea es optimizar, osea al ingresar cliente por cliente por ejemplo, cada documento tendra el nombre del cliente y puede que con informacion adicional, entonces el sistema reconoce el nombre y adjunta en la data de cada clienet sus respectivos documentos

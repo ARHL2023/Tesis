@@ -1,8 +1,11 @@
 1.	Login
+
 Datos de entrada
 •	Usuario (Texto max 20 caracteres)
 •	Contraseña (Texto max 20 caracteres, contenga al menos 8 caracteres y tenga una combinación de letras, números y caracteres especiales)
+
 Funcionalidades.
+
 •	Botón "Iniciar sesión" (Validando campos, mostrar mensajes error etc.)
 •	Botón cambio de contraseña.
 •	Seguridad: Limitar intentos fallidos (5), se activará después de 2 horas.
@@ -16,8 +19,11 @@ Funcionalidades.
 
 
 2.	Garantía
+
 Datos de entrada
+
 Para ser garantía la fecha de compra debe ser de hasta 3 años a su fecha de compra.
+
 •	Fecha de Compra (Como fecha, debe ser valida)	
 •	Fecha de Intervención (Como fecha, día de la atención, puede ser más de una pero la que se paga es cuando se soluciona el problema, las demás se siguen respaldando en la misma data)	
 •	Cantidad (Como texto, cantidad de repuestos cambiados, también puede ser 0 por un ajuste técnico etc)
@@ -35,7 +41,9 @@ Para ser garantía la fecha de compra debe ser de hasta 3 años a su fecha de co
 •	Correo	 (Como Texto)
 •	teléfono del cliente (Como número, máximo 10 caracteres)
 •	Técnico (Como Texto, máximo 30 caracteres)
+
 Funcionalidades.
+
 Selección año-mes: en este modulo seleccionamos el año y mes donde vamos a trabajar mensualmente, puede ser por calendario.
 Reporte: al finalizar cada mes, la data se guardará en un módulo reportes para su respectivo uso.
 Operaciones CRUD: se agregará datos, se eliminará o modificara mensualmente en caso de un error, estos últimos no se podrán alterar si se cierra mes.

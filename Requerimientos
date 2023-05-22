@@ -1,1 +1,12 @@
-
+1.	Login
+Datos de entrada
+•	Usuario (Texto max 20 caracteres)
+•	Contraseña (Texto max 20 caracteres, contenga al menos 8 caracteres y tenga una combinación de letras, números y caracteres especiales)
+Funcionalidades.
+•	Botón "Iniciar sesión" (Validando campos, mostrar mensajes error etc.)
+•	Botón cambio de contraseña.
+•	Seguridad: Limitar intentos fallidos (5), se activará después de 2 horas.
+•	Registrar fecha y hora, nombre usuario, IP, duración de la sesión, navegador que está usando.
+•	Mantener sesión iniciada.
+•	Cerrar sesión automáticamente por inactividad.
+•	Establecer roles.

@@ -1,11 +1,30 @@
-1.	Login
+Requerimientos
+Las siguientes funcionalidades son las básicas que harán los módulos de garantía, instalación, instalación en promoción, reparaciones, visitas técnicas, reportes
 
+Selección año-mes: en este módulo seleccionamos el año y mes donde vamos a trabajar mensualmente, puede ser por calendario.
+Reporte: al finalizar cada mes, la data se guardará en un módulo reportes para su respectivo uso.
+Operaciones CRUD: se agregará datos, se eliminará o modificara mensualmente en caso de un error, estos últimos no se podrán alterar si se cierra mes.
+Botón cierre mes: Botón que enviara la data a su respectivo modulo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.	Login
 Datos de entrada
 •	Usuario (Texto max 20 caracteres)
 •	Contraseña (Texto max 20 caracteres, contenga al menos 8 caracteres y tenga una combinación de letras, números y caracteres especiales)
-
 Funcionalidades.
-
 •	Botón "Iniciar sesión" (Validando campos, mostrar mensajes error etc.)
 •	Botón cambio de contraseña.
 •	Seguridad: Limitar intentos fallidos (5), se activará después de 2 horas.
@@ -18,12 +37,17 @@ Funcionalidades.
 
 
 
+
+
+
+
+
+
+
+
 2.	Garantía
-
 Datos de entrada
-
 Para ser garantía la fecha de compra debe ser de hasta 3 años a su fecha de compra.
-
 •	Fecha de Compra (Como fecha, debe ser valida)	
 •	Fecha de Intervención (Como fecha, día de la atención, puede ser más de una pero la que se paga es cuando se soluciona el problema, las demás se siguen respaldando en la misma data)	
 •	Cantidad (Como texto, cantidad de repuestos cambiados, también puede ser 0 por un ajuste técnico etc)
@@ -34,19 +58,64 @@ Para ser garantía la fecha de compra debe ser de hasta 3 años a su fecha de co
 •	Serie (Como texto)
 •	Garantía (Como número, se ve con instalación autocompletar si es posible, de no existir se completa con “Sap”)
 •	Técnico (Como texto, definido desde la BD)
-•	Cliente	 (Como texto, máximo 50 caracteres)
+•	Cliente (Como texto, máximo 50 caracteres)
 •	Observación	(Como texto, Slider: Dar de baja, pagar al técnico – No dar de baja, pagar al técnico)
 •	valor a Pagar 	(Como decimal)
-•	Cédula	 (Como entero, máximo 10 caracteres)
-•	Correo	 (Como Texto)
+•	Cédula (Como entero, máximo 10 caracteres)
+•	Correo (Como Texto)
 •	teléfono del cliente (Como número, máximo 10 caracteres)
 •	Técnico (Como Texto, máximo 30 caracteres)
-
-Funcionalidades.
-
-Selección año-mes: en este modulo seleccionamos el año y mes donde vamos a trabajar mensualmente, puede ser por calendario.
-Reporte: al finalizar cada mes, la data se guardará en un módulo reportes para su respectivo uso.
-Operaciones CRUD: se agregará datos, se eliminará o modificara mensualmente en caso de un error, estos últimos no se podrán alterar si se cierra mes.
-Botón cierre mes: Botón que enviara la data a su respectivo modulo.
+•	Descripción del problema (Como texto, máximo 200 palabras)
 Cargar documentos: podremos cargar imágenes que corresponden a una hoja de servicio y documentos en pdf que son las facturas correspondientes.
-Cargar documentos: podremos cargar imágenes que corresponden a una hoja de servicio y documentos en pdf que son las facturas correspondientes. como se puede implementar la idea es optimizar, osea al ingresar cliente por cliente por ejemplo, cada documento tendra el nombre del cliente y puede que con informacion adicional, entonces el sistema reconoce el nombre y adjunta en la data de cada clienet sus respectivos documentos
+Cargar documentos: podremos cargar imágenes que corresponden a una hoja de servicio y documentos en pdf que son las facturas correspondientes. Como se puede implementar la idea es optimizar, osea al ingresar cliente por cliente por ejemplo, cada documento tendra el nombre del cliente y puede que con informacion adicional, entonces el sistema reconoce el nombre y adjunta en la data de cada clienet sus respectivos documentos
+
+
+3.	Instalación un producto
+Datos de entrada
+•	Fecha de compra (Fecha valida, opcional
+•	Lugar de compra (Texto, máximo 20 caracteres, opcional)
+•	Número de factura de compra (Fecha, fecha valida, opcional)
+•	Código del producto (Texto)
+•	Descripción del producto (Texto)
+•	Serie del equipo (Texto)
+•	Garantía del equipo (Numero)
+•	Técnico (Texto, máximo 20 caracteres)
+•	Ciudad (Texto, máximo 20 caracteres)
+•	Fecha de instalación (Fecha valida, opcional)
+•	Nombre del cliente (Texto, máximo 50 caracteres)
+•	Dirección de instalación (Texto, máximo 50 caracteres)
+•	Celular del cliente (Numero, máximo 10 caracteres)
+•	Precio (Decimal, asociado al/los productos a instalar)
+•	Cómo llegó la información (Texto, máximo 10 caracteres)
+•	Técnico que atendió (Texto, máximo 20 caracteres)
+•	Viático (Decimal, opcional)
+•	Número de factura (Texto, opcional)
+•	Cédula o RUC (Numero, máximo 10 caracteres)
+•	Correo del cliente (Texto, correo valido, máximo 50 caracteres)
+Nota: Al ingresar el código del producto, se debe copiar automáticamente la descripción del producto correspondiente, y viceversa.
+Funcionalidades.
+ 
+
+4.	Instalación promoción
+Datos de entrada
+•	Cédula o ruc	(Numero, máximo 10 caracteres)
+•	Nombre (Texto, máximo 50 caracteres)
+•	Dirección (Texto, máximo 50 caracteres)
+•	E.mail	 (Texto, correo valido, máximo 50 caracteres)
+•	Celular (Numero, máximo 10 caracteres)
+•	Género (Texto, máximo 10 caracteres)
+•	Cómo llego la información 	
+•	Técnico supervisor	(Texto, máximo 20 caracteres, definido en BD)
+•	Técnico que atendió	(Texto, máximo 20 caracteres, definido en BD)
+•	Viático (Decimal, opcional)
+•	N. Factura (Texto, opcional)
+•	Precio	(Decimal, son los precios del valor de la promoción ver en BD)
+•	Descripción (Como Texto, se puede autocompletar con el código del producto, definido desde la BD)
+•	Código (Como Texto, se puede autocompletar con la descripción del producto, definido desde la BD)	
+•	Fecha de compra (día/mes /año)	
+•	Lugar de compra (Texto, máximo 20 caracteres)
+•	# factura (Texto)
+•	Serie del equipo (Texto) 	
+•	Garantía (Como número, se ve con instalación autocompletar si es posible, de no existir se completa con “Sap”)
+•	Ciudad (Texto, Max 10 caracteres)
+•	Fecha de instalación (Fecha valida)
